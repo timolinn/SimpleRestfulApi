@@ -27,6 +27,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['prefix' => 'api/v1'], function() {
 
-    Route::resource('report', 'UserController');
+    Route::resource('reports', 'UserController');
 
 });
