@@ -46,7 +46,7 @@ class UserController extends Controller
           'error' => [
             'message' => 'NO Reports were found!',
           ]
-        ], 404)
+        ], 404);
     }
   }
 
