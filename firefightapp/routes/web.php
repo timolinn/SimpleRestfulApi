@@ -23,3 +23,8 @@ Route::get('/user', function()
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/reports', [
+        'uses' => 'UserController@getReports',
+        'as' => 'users.reports'
+]);
