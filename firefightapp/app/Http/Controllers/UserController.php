@@ -32,7 +32,14 @@ class UserController extends Controller
 
   public function index()
   {
-      return User::all();
+      //return User::all();
+
+      $reports = User::all();
+
+      return json_encode(array(
+        'data' => $reports->toArray(),
+        'message' => 'reports retrieved Successfully'
+      ));
 
     //   if ($reports) {
 
