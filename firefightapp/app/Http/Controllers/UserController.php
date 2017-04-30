@@ -50,20 +50,20 @@ class UserController extends Controller
     }
   }
 
-  public function show($id)
-  {
-    $report = User::find($id);
-    if ($report) {
-      return Response::json([
-        'data' => $report->toArray(),
-      ]);
-    } else {
-        return Response::json([
-          'error' => [
-            'message' => 'Reports not found!',
-          ]
-        ], 404)
-    }
-  }
+  // public function show($id)
+  // {
+  //   $report = User::find($id);
+  //   if ($report) {
+  //     return Response::json([
+  //       'data' => $report->toArray(),
+  //     ]);
+  //   } else {
+  //       return Response::json([
+  //         'error' => [
+  //           'message' => 'Reports not found!',
+  //         ]
+  //       ], 404);
+  //   }
+  // }
 
 }
