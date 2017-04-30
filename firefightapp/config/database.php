@@ -30,8 +30,7 @@ return [
     | choice installed on your machine before you begin development.
     |
     */
-    /:@/heroku_c75e00f58645d47?reconnect=true
-
+  
     'connections' => [
 
         'sqlite' => [
