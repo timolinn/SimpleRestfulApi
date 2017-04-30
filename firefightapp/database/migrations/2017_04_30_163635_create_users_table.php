@@ -16,6 +16,12 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->integer('phone_number');
+            $table->text('fire_location');
+            $table->string('fire_magnitude');
+            $table->string('fire_origin');
+            $table->string('fire_object');
+            $table->string('trapped_people');
         });
     }
 
