@@ -24,7 +24,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/reports', [
-        'uses' => 'UserController@getReports',
-        'as' => 'users.reports'
-]);
+
+Route::group(['prefix' => 'api/v1'], function() {
+
+    Route::resource('report', 'UserController');
+
+});
