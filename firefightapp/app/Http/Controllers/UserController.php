@@ -40,7 +40,7 @@ class UserController extends Controller
         'status' => 'success',
         'data' => $reports->toArray(),
         'message' => 'Reports retrieved Successfully!'
-      ], 200]);
+      ], 200);
     } else {
         return Response::json([
           'error' => [
