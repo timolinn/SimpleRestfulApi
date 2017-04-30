@@ -32,22 +32,22 @@ class UserController extends Controller
 
   public function index()
   {
-      $reports = User::all();
+      return User::all();
 
-      if ($reports) {
+    //   if ($reports) {
 
-      return Response::json([
-        'status' => 'success',
-        'data' => $reports->toArray(),
-        'message' => 'Reports retrieved Successfully!'
-      ], 200);
-    } else {
-        return Response::json([
-          'error' => [
-            'message' => 'NO Reports were found!',
-          ]
-        ], 404);
-    }
+    //   return Response::json([
+    //     'status' => 'success',
+    //     'data' => $reports->toArray(),
+    //     'message' => 'Reports retrieved Successfully!'
+    //   ], 200);
+    // } else {
+    //     return Response::json([
+    //       'error' => [
+    //         'message' => 'NO Reports were found!',
+    //       ]
+    //     ], 404);
+    // }
   }
 
   // public function show($id)
