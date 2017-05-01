@@ -86,12 +86,12 @@ class UserController extends Controller
     // ]);
 
     //$report->save();
-    dd('storePost');
-    // User::create(Input::all());
+    //dd('storePost');
+     User::create(Input::all());
 
-    // return json_encode([
-    //             'message' => 'Your Report was received Successfully. Thank you for saving a life'
-    // ]);
+     return json_encode([
+                 'message' => 'Your Report was received Successfully. Thank you for saving a life'
+     ]);
 
   }
 
