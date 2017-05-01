@@ -82,7 +82,7 @@ class UserController extends Controller
       'fire_magnitude' => $request->input('fire_magnitude'),
       'fire_origin' => $request->input('fire_origin'),
       'fire_object' => $request->input('fire_object'),
-      'trapped_people' => $request->input('trapped_people'),
+      'trapped_people' => $request->input('trapped_people')
     ]);
 
     $report->save();
