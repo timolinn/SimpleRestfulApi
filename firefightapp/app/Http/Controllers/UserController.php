@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Collection;
-use App\Http\Requests;
+//use App\Http\Requests;
 
 class UserController extends Controller
 {
