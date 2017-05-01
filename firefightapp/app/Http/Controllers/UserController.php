@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Illuminate\Support\Collection;
-//use App\Http\Requests;
+use App\Http\Requests;
 
 class UserController extends Controller
 {
@@ -74,20 +74,20 @@ class UserController extends Controller
   //   }
   // }
 
-  public function store()
+  public function store(Request $request)
   {
-    // $report = new User([
-    //   'phone_number' => $request->input('phone_number'),
-    //   'fire_location' => $request->input('fire_location'),
-    //   'fire_magnitude' => $request->input('fire_magnitude'),
-    //   'fire_origin' => $request->input('fire_origin'),
-    //   'fire_object' => $request->input('fire_object'),
-    //   'trapped_people' => $request->input('trapped_people')
-    // ]);
+    $report = new User([
+      'phone_number' => $request->input('phone_number'),
+      'fire_location' => $request->input('fire_location'),
+      'fire_magnitude' => $request->input('fire_magnitude'),
+      'fire_origin' => $request->input('fire_origin'),
+      'fire_object' => $request->input('fire_object'),
+      'trapped_people' => $request->input('trapped_people')
+    ]);
 
-    //$report->save();
+    $report->save();
     //dd('storePost');
-     User::create(Input::all());
+    // User::create(Input::all());
 
      return json_encode([
                  'message' => 'Your Report was received Successfully. Thank you for saving a life'
